@@ -1,16 +1,26 @@
-
-
-h1 {
-    color: green;
-    font-size: 30px;
+html {
+    font-size: 16px;
 }
 
-h2 {
-    color: green;
-    font-size: 20px;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ÉqÉâÉMÉmäpÉS ProN W3", Hiragino Kaku Gothic ProN, Arial, "ÉÅÉCÉäÉI", Meiryo, sans-serif;
 }
 
-p {
-    /*color: yellow;
-    font-size: 40px;*/
+footer {
+    background-color: #625330;
+    padding: 60px 0;
 }
+
+    footer h2 {
+        width: 1000px;
+        margin: auto;
+        color: #FFFFFF;
+        font-size: 1.3rem;
+    }
+
+    footer p {
+        width: 1000px;
+        margin: 20px auto 0;
+        color: #FFFFFF;
+        line-height: 1.8rem;
+    }
