@@ -202,11 +202,65 @@ b = {
     hoge: function () { return "b" }
 }
 
-a = [ 1,3,function(foo,bar){ return foo*bar },12,function(a[0],a[1],a[3]){ return 1 }
+a = [ 
+    1,
+    3,
+    function(foo,bar){ 
+        console.log (foo*bar); },
+    12,
+    function(){
+        console.log(a[0] + a[1] + a[3]);}
+    ]
 
-]
-console.log(a[2])
-console.log(a[4])
+a[2](2, 3)
+
+suzuki = {
+    age: 32,
+    first_name: "健人",
+    last_name: "鈴木",
+    get_fullname: "鈴木 健人"
+}
+
+suzuki = {
+    age: 32,
+    first_name: "健人",
+    last_name: "鈴木",
+    get_fullname: function () {
+        return suzuki["last_name"] + " " + suzuki["first_name"]
+    }
+}
+
+suzuki["get_fullname"]()
+suzuki.get_fullname()
+
+suzuki = {
+    age: 32,
+    first_name: "健人",
+    last_name: "鈴木",
+    get_fullname: function () {
+        return this.last_name + " " + this.first_name
+    }
+}
+
+
+taro = {
+    right_hand: null,
+    left_hand: null,
+
+    get_pencil: function (hand) {
+        if (hand == right) {  this.right_hand="pencil"}else{this.left_hand="pencil"}},
+
+    drop:function(hand){
+        if (hand == right) {  this.right_hand=null}else{this.left_hand=null}},
+
+    show:function(hand){
+        if (hand == right) { return this.right_hand  } else { return this.left_hand }
+    },
+
+    }
+        
+taro.get_pencil("right")
+taro.show("right")
 
 
 

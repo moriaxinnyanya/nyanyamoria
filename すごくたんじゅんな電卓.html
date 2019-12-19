@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <style type="text/css">
+        div {
+            height: 60px;
+            background-color: gray;
+            margin: 10px;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .disable {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>0</h1>
+    <h2>ざんねん</h2>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <script type="text/javascript">
+	$("div").on("click",function(){
+		if( !$(this).hasClass("disable") ){
+			h1_num = Number( $("h1").text() );
+			this_num = Number( $(this).text() );
+			$("h1").text( h1_num + this_num );
+			if( h1_num+this_num===10 ){
+				$("h2").text( "やったね" );
+			}else{
+				$("h2").text( "ざんねん" );
+			}
+		}
+		$(this).addClass("disable");
+	})
+    </script>
+</body>
+</html>
